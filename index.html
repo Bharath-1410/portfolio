@@ -1,0 +1,214 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <script>
+        let percent = 0;
+        let interval;
+        function startLoading(id1,id2,id3,id4) {
+            percent = 0;
+            document.querySelector('.progress').style.width = percent + '%';
+            document.querySelector('.progress').parentElement.style.display = 'block';
+            interval = setInterval(function() {
+                percent += 33;
+        document.querySelector('.progress').style.width = percent + '%';
+        if (percent >= 100) {
+          clearInterval(interval);
+          document.querySelector('.progress').parentElement.style.display = 'none';
+        }
+      }, 500);
+    }
+        const router = (id1,id2,id3,id4)=>{
+            document.body.scrollTop = 0;
+            document.getElementById(`${id1}`).style.display="none"
+            document.getElementById(`${id2}`).style.display="none"
+            document.getElementById(`${id3}`).style.display="none"
+            document.getElementById(`${id4}`).style.display="flex"
+            document.getElementById('page-footer').style.display='flex'
+            
+        }
+        const delay = async (callback, time) => {
+            await setTimeout(callback, time);
+          };
+          
+          
+    </script>
+</head>
+<body>
+    <div class="loading-bar">
+        <div class="progress"></div>
+      </div>
+    <nav>
+        <div class="navbar">
+            <ul class="items">
+                <ul class="items1">
+                    <div class="avatars">
+                        <img class="avatar" src="bharath-modified." alt="avatar">
+                    </div>
+                </ul>
+                <ul class="items2">
+                    <li class="list_items" id="id1" onclick="router('blog','projects','contacts','home')">Home</li>
+                    <li class="list_items" id="id2" onclick="router('home','blog','contacts','projects')">Projects</li>
+                    <li class="list_items" id="id3" onclick="router('home','projects','contacts','blog')">Blog</li>
+                    <li class="list_items" id="id4" onclick="router('home','projects','blog','contacts')">Contact</li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+    <div class="introduction" id="home">
+        <section class="intro">
+            <div class="photo">
+                <img class="photo-profile" width="350" src="bharath-modified.png" alt="avatar">
+            </div>
+            <div class="hello">
+                <h3>  HI  <h2> I am Bharath, <br>Data Science Aspirant</h2></h3>
+            </div>
+        </section>
+        <div class="extra">
+            <pre><h4 >Student in sathyabama university at Chennai, <br>                 graduating in Summer 2025 </h4></pre>
+        </div>
+    </div>
+    <div class="projects" id="projects">
+        <div class="container1">
+            <div class="realworldprojects">
+                <div class="card">
+                    <img  class="thumbnail" id="lung" src="lung cancer.jpg" alt="picture">
+                    <div class="description">
+                        <h6 class="titles">Lung cancer prediction</h6>
+                        <p class="discuss">Lung cancer dataset with few datapoints of kaggle is used in this cancer prediction</p>
+                        <div class="card-btn"> 
+                            <a class="github-links" href="https://github.com/464venkatsai/Lung_cancer_prediction" target="_blank">
+                                <button class="viewbutton">View Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="realworldprojects">
+                <div class="card">
+                    <img  class="thumbnail"  src="house price.jpg" alt="picture">
+                    <div class="description">
+                        <h6 class="titles">House Price Prediction</h6>
+                        <p class="discuss">Bostan housing dataset of calfonia is used in this House price prediction</p>
+                        <div class="card-btn">
+                            <a class="github-links" href="https://github.com/464venkatsai/house_price_prediction" target="_blank">
+                                <button class="viewbutton">View Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="realworldprojects">
+                <div class="card">
+                    <img  class="thumbnail" src="image downloader.png" alt="picture">
+                    <div class="description">
+                        <h6 class="titles">Python Image Downloader</h6>
+                        <p class="discuss">We can download the images using python by using request module and Image's url</p>
+                        <div class="card-btn">
+                            <a class="github-links" href="https://github.com/464venkatsai/Python_Image_downloader" target="_blank">
+                                <button class="viewbutton">View Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="realworldprojects">
+                <div class="card">
+                    <img  class="thumbnail" src="mnist image.jpg" alt="picture">
+                    <div class="description">
+                        <h6 class="titles">MNIST Classification</h6>
+                        <p class="discuss">MNIST Dataset of handwritten numbers set is classified by LogisticRegression</p>
+                        <div class="card-btn">
+                            <a class="github-links" href="https://github.com/464venkatsai/MNSIT_classification" target="_blank">
+                                <button class="viewbutton">View Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="realworldprojects">
+                <div class="card">
+                    <img  class="thumbnail" src="customer segementation.jpg" alt="picture">
+                    <div class="description">
+                        <h6 class="titles">Customer Segmentation</h6>
+                        <p class="discuss">Finding interests and trends based on purchasing patterns of Customer behavior</p>
+                        <div class="card-btn"> 
+                            <a class="github-links" href="https://github.com/464venkatsai/Lung_cancer_prediction" target="_blank">
+                                <button class="viewbutton">View Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="blog"id="blog">
+        <img class="pass" src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Blog">
+    </div>
+    <div id="contacts">
+        <div class="contacts">
+            <section class="contact">
+            <div class="photo">
+                <h1 id="free"> Feel free to contact !</h1>
+            </div>
+            <div class="photo">
+                <img class="photo-profile" width="280" src="bharath-modified.png" alt="avatar">
+            </div>
+            <div class="icons">
+                <a href="https://github.com/bharath-1410" target="_blank"><img width="30" class="img1" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github"></a>
+                <a href="https://www.linkedin.com/in/bharathkodidasu/" target="_blank"><img width="30" class="img1" src="https://cdn-icons-png.flaticon.com/512/1384/1384088.png" alt="Linked in"></a>
+                <a href="https://www.instagram.com/b.h.a.r.a.t.h_1410/" target="_blank"><img width="30"  class="img1"src="https://cdn-icons-png.flaticon.com/512/717/717392.png" alt="Instagram"></a>
+                <a href="#" target="_blank"><img width="30"  class="img1"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAY1BMVEX///8AAAD7+/vCwsI+Pj739/fy8vKUlJR6enrNzc2AgIC+vr53d3dlZWVNTU0ZGRlbW1vc3Nynp6e1tbXo6OiHh4crKysgICBra2sKCgpUVFRISEivr68zMzNDQ0PU1NSfn58moitwAAAExklEQVR4nO1baZezKgy2al26uNtlpq39/7/ynYC2uCAJ0Mu55/T5Nk4xjyQkIQTP++KL/yf8pkz3Vdwmh0PSxtU+LRv/P5MdpfExO20mOGXHOI0+zyKNf6aiRfzE6Sel7w9rwgcc9p+RXrZnUUz+KC6HJNntkuRwKR65+L9zW9qW7qfH1+uvYRH/GZ2obz/6M8q4CK+vHx1Tq+YQvBX/e+ukr/a72+/bHAJr4tPXW4tbpPpxdCteXO0YZHPp33dvldJ7Du19UERjLN6ver2GNVI8o1CHvb1UhqbQ9PN5qokv8uveVRVGk1D1U3nTGXzrB1fa4re99ndbzfE7Pv6iOb7M2PBHpzcc0D3YKzItv9Rx59YaWZHfcrep8REpt2JjbxLwVUR2CTWffsLSkyHiaqhpo7gFF+biAQV9JfHv39mR73k76hxw/ce25HteTLODztB/LIB7NORaKHPL3w9gc5Cj/ME2s6r/AcwOMoxPvFi0fxFsLVzUv2PaetiX73kPlGU1zP9Z8D9zRMwnKqKzzybKXjY3QsCUux5bmALaz8j3vFaphAZm6UGNf01QP+M4fla3ug7WVpoPZnBdU8KR4C4G6dV9tCkJ1+yHubij/P8p2QP48Wi7pCLAvYHcJbP8n5I/NeFminUCW/jJr+y/ATVqdjPxKgI8zktWmQ/7rxNBfjmdfgQBD7L1n2UzZxZASVwWKwUqArXcCmAJhIQlWC/JVxLwQ9lCKKkTcNUiwHkveQtwU3dCEAgW5asJRLBzXXK2Z8lzGdplAiflN8DA8/zxHkYTJsB/jOTmSVUz7JV+JILfz+tIUH+ipCHbkfwnYSRLTQ6zp/AaihNqRPm0BI45o+nDlKiBPnXnuNLiF9PB1BVA1ir10UsQF8GduP+GmDPJupkbJm2eRAIhTT7TwcQdR+SJNCHQXWf6Bo1S3LAZAeaOx0YQExehGQG2EMdGcJybxScJwPeOApKfLSyMDxIAjWeixhtIE2iVJCMCEHlPzeRBTqsoGhFo8skHw5Sg6kFNOaASCbwfl6jPYHUjUeUQChV7Jo5ko8ITQ4DtAMWACJ+D2DkP1Z414EwZagDiHg2WxTxAahHAmTIEf3HZQ5KS2CGAM2VQZTv52w4BZUq4LBBmBJVUKAmgTJm/R9S5PQIoS5oTsKcCZF49FWjPCJFJzdQI7S1DZESbLkO0I1J6QmRAmToitCvexwPEc+zz6ynSBGauGB2M3hCjIbmuOQtGzsOx84TEeUrmPCl1n5Y735g435o535yabc+pBBa25/QChQGBxQIFuURjQGCxREMuUhkQWC5SUct0+gQkZTpqoVKfgKRQSS3VahOQlmqJxWptAtJiNbFcr0tAXq4nHljoElg5sKAd2egSWDmyoR1aaRJYO7SiHdvpEVg/tiMdXOoRUBxcUo5utQiojm4ph9c6BNSH14Tjex0C6uN7QgODBgFMAwO+hYNOANXCgW9ioRPANbGg23iCTT7giiKAbePBNjL5WwGI1+IbmZy3crlvZnPfzue+odF9S6f7plb3bb3uG5vdt3a7b273nLf3e+4vOLi/4vGHZrhh5OaSC8DxNR+A44tOnvurXgC3l9043F7343B74ZHB8ZXPgYXDS69ffGEZ/wDVRT5k/0UWCgAAAABJRU5ErkJggg==" alt="Facebook"></a>
+            </div>
+        </section>
+    </div>
+    </div>
+    <footer id="page-footer">
+        <div class="border">
+            <section class="foot">
+                <section class="foot_items">
+                    <div class="form">
+                <div class="connect">
+                    <b>Contact Me</b>
+                </div>
+                    <form action="https://formsubmit.co/kodidasubharath2003@outlook.com" method="POST">
+                        <div class="details">
+                        <input class="inputs" type="text"id="name" name="name" placeholder="Enter Name" required>
+                        <div class="line"></div>
+                        <input class="inputs" type="email"id="email" name="email" placeholder="Enter Email" required>
+                        <div class="line"></div>
+                        <input class="inputs" type="text"id="msg" name="message" placeholder="Enter Message" required>
+                        <div class="line"></div>
+                        <input type="hidden" name="_subject" value="New visitor">
+                    </div>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+        </section>
+            </section>
+        </div>
+        <div class="end">
+            <div class="foot_list">
+            <h6>Connect with Bharath</h6>
+            <div class="email">
+                <img width="25"height="30" class="images" src="https://cdn.pixabay.com/photo/2014/04/03/09/58/email-309491_960_720.png" alt="">
+                <p>kodidasubharath2003@gmail.com</p>
+            </div>
+            <div class="line1"></div>
+            <div class="icons">
+                <a href="https://github.com/bharath-1410" target="_blank"><img width="30" class="img" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/bharathkodidasu/" target="_blank"><img width="30" class="img" src="https://cdn-icons-png.flaticon.com/512/1384/1384088.png" alt=""></a>
+                <a href="https://www.instagram.com/b.h.a.r.a.t.h_1410/" target="_blank"><img width="30"  class="img"src="https://cdn-icons-png.flaticon.com/512/717/717392.png" alt=""></a>
+                <a href="#" target="_blank"><img width="30"  class="img"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAY1BMVEX///8AAAD7+/vCwsI+Pj739/fy8vKUlJR6enrNzc2AgIC+vr53d3dlZWVNTU0ZGRlbW1vc3Nynp6e1tbXo6OiHh4crKysgICBra2sKCgpUVFRISEivr68zMzNDQ0PU1NSfn58moitwAAAExklEQVR4nO1baZezKgy2al26uNtlpq39/7/ynYC2uCAJ0Mu55/T5Nk4xjyQkIQTP++KL/yf8pkz3Vdwmh0PSxtU+LRv/P5MdpfExO20mOGXHOI0+zyKNf6aiRfzE6Sel7w9rwgcc9p+RXrZnUUz+KC6HJNntkuRwKR65+L9zW9qW7qfH1+uvYRH/GZ2obz/6M8q4CK+vHx1Tq+YQvBX/e+ukr/a72+/bHAJr4tPXW4tbpPpxdCteXO0YZHPp33dvldJ7Du19UERjLN6ver2GNVI8o1CHvb1UhqbQ9PN5qokv8uveVRVGk1D1U3nTGXzrB1fa4re99ndbzfE7Pv6iOb7M2PBHpzcc0D3YKzItv9Rx59YaWZHfcrep8REpt2JjbxLwVUR2CTWffsLSkyHiaqhpo7gFF+biAQV9JfHv39mR73k76hxw/ce25HteTLODztB/LIB7NORaKHPL3w9gc5Cj/ME2s6r/AcwOMoxPvFi0fxFsLVzUv2PaetiX73kPlGU1zP9Z8D9zRMwnKqKzzybKXjY3QsCUux5bmALaz8j3vFaphAZm6UGNf01QP+M4fla3ug7WVpoPZnBdU8KR4C4G6dV9tCkJ1+yHubij/P8p2QP48Wi7pCLAvYHcJbP8n5I/NeFminUCW/jJr+y/ATVqdjPxKgI8zktWmQ/7rxNBfjmdfgQBD7L1n2UzZxZASVwWKwUqArXcCmAJhIQlWC/JVxLwQ9lCKKkTcNUiwHkveQtwU3dCEAgW5asJRLBzXXK2Z8lzGdplAiflN8DA8/zxHkYTJsB/jOTmSVUz7JV+JILfz+tIUH+ipCHbkfwnYSRLTQ6zp/AaihNqRPm0BI45o+nDlKiBPnXnuNLiF9PB1BVA1ir10UsQF8GduP+GmDPJupkbJm2eRAIhTT7TwcQdR+SJNCHQXWf6Bo1S3LAZAeaOx0YQExehGQG2EMdGcJybxScJwPeOApKfLSyMDxIAjWeixhtIE2iVJCMCEHlPzeRBTqsoGhFo8skHw5Sg6kFNOaASCbwfl6jPYHUjUeUQChV7Jo5ko8ITQ4DtAMWACJ+D2DkP1Z414EwZagDiHg2WxTxAahHAmTIEf3HZQ5KS2CGAM2VQZTv52w4BZUq4LBBmBJVUKAmgTJm/R9S5PQIoS5oTsKcCZF49FWjPCJFJzdQI7S1DZESbLkO0I1J6QmRAmToitCvexwPEc+zz6ynSBGauGB2M3hCjIbmuOQtGzsOx84TEeUrmPCl1n5Y735g435o535yabc+pBBa25/QChQGBxQIFuURjQGCxREMuUhkQWC5SUct0+gQkZTpqoVKfgKRQSS3VahOQlmqJxWptAtJiNbFcr0tAXq4nHljoElg5sKAd2egSWDmyoR1aaRJYO7SiHdvpEVg/tiMdXOoRUBxcUo5utQiojm4ph9c6BNSH14Tjex0C6uN7QgODBgFMAwO+hYNOANXCgW9ioRPANbGg23iCTT7giiKAbePBNjL5WwGI1+IbmZy3crlvZnPfzue+odF9S6f7plb3bb3uG5vdt3a7b273nLf3e+4vOLi/4vGHZrhh5OaSC8DxNR+A44tOnvurXgC3l9043F7343B74ZHB8ZXPgYXDS69ffGEZ/wDVRT5k/0UWCgAAAABJRU5ErkJggg==" alt=""></a>
+            </div>
+            </div>
+        </div>
+        </footer>
+</body>
+</html>
